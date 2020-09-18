@@ -48,7 +48,7 @@ class Manager(Employee):
 
 
 
-dev_1 = Developer('Vitalii', 'Hlapshun', 'Hui', 50000, 'PHP')
+dev_1 = Developer('Vitalii', 'Hlapshun', 'Searcher', 50000, 'PHP')
 dev_2 = Developer('Mii', 'General', 'Full_Stack_Developer', 40000, 'Java')
 
 mgr_1 = Manager('Sorokin', 'Olexii', 'Pots', 120000, [dev_1])
