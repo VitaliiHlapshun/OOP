@@ -1,22 +1,22 @@
 class Employee:
     raise_amount = 1.06
-    num_of_dicks = 5
+    num_of_persons = 5
     def __init__(self, first, last, status, pay):
-        self.dick = first
+        self.first = first
         self.last = last
         self.status = status
         self.pay = pay
         self.email = first + '.' + last + '@company.com'
 
-        Employee.num_of_dicks += 1
+        Employee.num_of_persons += 1
     def fullname(self):
-        return '{} {} {}'.format(self.dick, self.last, self.status)
+        return '{} {} {}'.format(self.first, self.last, self.status)
 
     def apply_raise(self):
         self.pay = int(self.pay * Employee.raise_amount)
 
-emp_1 = Employee('Vitalii', 'Hlapshun', 'Hui', 50000)
-emp_2 = Employee('Mii', 'General', 'bliat', 40000)
+emp_1 = Employee('Vitalii', 'Hlapshun', 'searcher', 50000)
+emp_2 = Employee('Mii', 'General', 'Full_Stack_Developer', 40000)
 
 print(emp_1.email)
 print(emp_2.email)
@@ -37,4 +37,4 @@ print(Employee.raise_amount)
 print(emp_1.raise_amount)
 print(emp_2.raise_amount)
 
-print(Employee.num_of_dicks)
+print(Employee.num_of_persons)
