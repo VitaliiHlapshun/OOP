@@ -1,0 +1,40 @@
+class Employee:
+    raise_amount = 1.06
+    num_of_dicks = 5
+    def __init__(self, first, last, status, pay):
+        self.dick = first
+        self.last = last
+        self.status = status
+        self.pay = pay
+        self.email = first + '.' + last + '@company.com'
+
+        Employee.num_of_dicks += 1
+    def fullname(self):
+        return '{} {} {}'.format(self.dick, self.last, self.status)
+
+    def apply_raise(self):
+        self.pay = int(self.pay * Employee.raise_amount)
+
+emp_1 = Employee('Vitalii', 'Hlapshun', 'Hui', 50000)
+emp_2 = Employee('Mii', 'General', 'bliat', 40000)
+
+print(emp_1.email)
+print(emp_2.email)
+
+print(emp_1.fullname())
+print(emp_2.fullname())
+
+print(emp_1.fullname())  # this you should remember motherflower
+print(Employee.fullname(emp_1))  # this as well
+
+emp_1.raise_amount = 1.08
+print(emp_1.__dict__)
+
+# print(emp_1.pay)
+# emp_1.apply_raise()
+
+print(Employee.raise_amount)
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
+
+print(Employee.num_of_dicks)
